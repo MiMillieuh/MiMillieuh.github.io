@@ -180,11 +180,13 @@ html, body{
 #tablecont{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #tablecont div{
     background-color: rgb(70, 70, 70);
     position: relative;
+    margin-bottom: 20px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
