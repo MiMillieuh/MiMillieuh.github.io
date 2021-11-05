@@ -12,6 +12,7 @@ a{
 }
 
 html, body{
+    font-family: massiveretalition;
     background-color: rgb(32, 32, 32);
     margin: 0;
     padding: 0;
