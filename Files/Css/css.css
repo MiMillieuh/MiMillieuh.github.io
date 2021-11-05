@@ -3,9 +3,9 @@
     src: url(../Fonts/rans____.ttf);
 }
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: massiveretalition;
 }
-
+/*Arial, Helvetica, sans-serif;*/
 a{
     text-decoration: none;
     color: white;
