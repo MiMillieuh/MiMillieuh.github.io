@@ -21,8 +21,8 @@ html, body{
 }
 
 #welcome{
-    background-color: white;
-    color: black;
+    background-color: rgb(32, 32, 32);
+    color: white;
     position: absolute;
     z-index: 1;
     float: none;
@@ -188,16 +188,24 @@ html, body{
 }
 
 #tablecont{
-    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
+}
+
+#spaceolder{
+    width: 100%;
+    height: 50px;
 }
 
 #tablecont div{
     background-color: rgb(70, 70, 70);
     position: relative;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -316,9 +324,9 @@ html, body{
   
   .progress-value {
     animation: load 1s normal forwards;
-    box-shadow: 0 10px 40px -10px rgb(0, 4, 255);
+    box-shadow: 0 10px 40px -10px purple;
     border-radius: 100px;
-    background: rgb(0, 4, 255);;
+    background: purple;
     height: 30px;
     width: 0;
   }
