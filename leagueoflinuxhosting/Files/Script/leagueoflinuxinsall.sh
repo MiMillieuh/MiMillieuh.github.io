@@ -1,0 +1,2 @@
+#!bin/bash
+bash -c "mkdir ~/.LeagueOfLegends ; cd ~/.LeagueOfLegends ; wget https://lutris.nyc3.digitaloceanspaces.com/games/league-of-legend/launchhelper.sh ; wget https://lutris.nyc3.digitaloceanspaces.com/games/league-of-legend/syscall_check.sh ; wget https://github.com/GloriousEggroll/wine-ge-custom/releases/download/6.16-GE-3-LoL/wine-lutris-ge-6.16-3-lol-x86_64.tar.xz ; tar -xf wine-*.tar.xz"

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link rel="stylesheet" href="Files/Css/style.css">
+    <script src="Files/Js/js.js"></script>
+    <title>League of Linux Launcher</title>
+  </head>
+  <body>
+    <h4 id="animcredit">Animation : <a href="https://www.youtube.com/channel/UCLFzC-dZ6It_SHUWLHV9Vmg" target="_blank">Fierying</a> <br> Launcher : <a href="https://github.com/MiMillieuh" target="_blank">MiMillieuh</a></h4>
+    <div id="container">
+    <div id="title">
+    <h1>Welcome to</h1>
+    <h2>League of Linux</h2>
+  </div>
+    <div id="nologin">
+      <img id="leaguelogo" src="Files/Img/League-of-Legends-Logo-2009-2019.png" alt="">
+      <input id="vol-control" type="range" min="0" max="100" step="1" value="100" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+      <img id="volumelogo" src="Files/Img/minimal-speaker-icon.png" alt="">
+     <!-- <p id="defpath">League of Linux will install by default the game in the home folder in .LeagueOfLegends</p> -->
+     <p id="defpath">League of Linux Launcher only, private pre-relase, for demonstration puropses only</p>
+      <button class="button is-secondary" onclick="PlayDL()" id="PlayDL">Launch LOL</button>
+    </div>
+    <div onclick="checkmusic()" id="musicbox">
+      <img id="rito" src="Files/Img/rito-games-logo.png" alt="">
+      <input type="checkbox" onclick="checkmusicconfig()" id="nomusic" name="nomusic">
+      <label for="nomusic">Disable login Music</label>
+    </div>
+    <video id="loginvid" autoplay loop src="Files/Vids/LuluSplashe.mp4"></video>
+  </div>
+    
+    
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
