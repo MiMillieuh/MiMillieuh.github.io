@@ -1,0 +1,235 @@
+@font-face {
+    font-family: Noto;
+    src: url(../Fonts/NotoSans-Regular.ttf);
+}
+@font-face {
+    font-family: Noto-bold;
+    src: url(../Fonts/NotoSans-Bold.ttf);
+}
+
+body{
+    font-family: Noto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: rgb(219, 233, 255);
+}
+
+#titre{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.titlecontainer{
+    width: 40%;
+    left: 10%;
+    bottom: 400px;
+    padding: 0;
+    position: absolute;
+    z-index: 99;
+    color: white;
+    animation: introin 1s ease forwards;
+}
+
+.title{
+    width: 38%;
+    left: 10%;
+    height: 30vh;
+    bottom: 690px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 99;
+    color: white;
+    animation: introin 1s ease forwards;
+    text-align: center;
+    font-family: Noto-bold;
+    font-size: 7.4vw;
+    color: rgb(219, 233, 255);
+}
+
+.subtitle{
+    font-size: 2em;
+}
+
+#vidaccueil{
+    margin-top: 0px;
+    width: calc(100%);
+    height: calc(100vh);
+    z-index: 0;
+    object-fit: cover;
+    filter:brightness(80%)
+}
+
+.page{
+    height: 100vh;
+    width: 100%;
+}
+
+p{
+    font-family: Noto;
+    color: black;
+    font-size: 1.em;
+}
+
+h2{
+    font-family: Noto-bold;
+    font-size: 2.3em;
+}
+
+
+#col1{
+    animation: introinbot 1s ease forwards;
+    text-align: justify;
+    padding: 20px;
+    padding-top: 5px;
+    background-color: rgb(219, 233, 255);
+    z-index: 99;
+    height: 600px;
+    position: relative;
+    margin-top: -290px;
+    margin-left: 10%;
+    width: 38%;
+    float: left;
+}
+
+#col2{
+    text-align: justify;
+    padding: 20px;
+    padding-top: 5px;
+    background-color: rgb(219, 233, 255);
+    z-index: 99;
+    height: 600px;
+    position: relative;
+    margin-left: 54%;
+    width: 38%;
+}
+
+
+
+@keyframes introin {
+    0%{opacity: 0%;
+        bottom: 350px;}
+    100%{opacity: 100%;
+        bottom: 290px;}    
+}
+
+@keyframes introinbot {
+    0%{opacity: 0%;
+        margin-top: 0px;}
+    100%{opacity: 100%;
+        margin-top: -290px;}    
+}
+
+@keyframes vidscrollout {
+    0%{
+        margin-top: 0px;
+        width: calc(100%);
+        height: calc(100vh);
+        }
+    100%{
+        width: calc(100% - 200px);
+        height: calc(100vh);
+        }
+}
+
+.vidscrollout{
+    animation: vidscrollout 0.5s ease forwards;
+}
+
+
+@keyframes vidscrollin {
+    100%{
+        margin-top: 0px;
+        width: calc(100%);
+        height: calc(100vh);
+        }
+    0%{
+        width: calc(100% - 200px);
+        height: calc(100vh);
+        }
+}
+
+.vidscrollin{
+    animation: vidscrollin 0.5s ease forwards;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    #col1{
+        float: none;
+        padding: 20px;
+        width: calc(100% - 40px);
+        margin-left: 0;
+    }
+    #col2{
+        padding: 20px;
+        width: calc(100% - 40px);
+        margin-left: 0;
+    }
+
+    #titre{
+        top: 0;
+    }
+
+    #vidaccueil{
+        height: 20vh;
+    }
+
+
+    @keyframes introin {
+        0%{opacity: 0%;
+            bottom: 300px;}
+        100%{opacity: 100%;
+            bottom: 250px;}    
+    }
+    
+    @keyframes introinbot {
+        0%{opacity: 0%;
+            margin-top: 0px;}
+        100%{opacity: 100%;
+            margin-top: -290px;}    
+    }
+    
+    @keyframes vidscrollout {
+        0%{
+            margin-top: 0px;
+            width: calc(100%);
+            height: calc(100vh);
+            }
+        100%{
+            width: calc(100%);
+            height: calc(100vh);
+            }
+    }
+    
+    .vidscrollout{
+        animation: vidscrollout 1s ease forwards;
+    }
+    
+    
+    @keyframes vidscrollin {
+        100%{
+            margin-top: 0px;
+            width: calc(100%);
+            height: calc(100vh);
+            }
+        0%{
+            width: calc(100%);
+            height: calc(100vh);
+            }
+    }
+    
+    .vidscrollin{
+        animation: vidscrollin 1s ease forwards;
+    }
+
+
+  }
