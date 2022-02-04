@@ -64,16 +64,22 @@ window.addEventListener("scroll", (event) => {
         scrollsave = scroll;
         console.log(heighttitre + heightp1 - wineheight)
         if(winewidht < 1000){
-            timelineheight = scroll - (heightp1 + heighttitre) + wineheight/2 + 300 + "px";
-            document.getElementById("timeline").style.height = timelineheight;
+            timelineheight = scroll - (heightp1 + heighttitre) + wineheight/2 + 300;
+            document.getElementById("timeline").style.height = timelineheight +"px";
             if(scroll - (heightp1 + heighttitre) + wineheight/2 + 300 <= 0){
                 document.getElementById("timeline").style.height = 0;
             }
         }else
             if (scroll >= heighttitre + heightp1 -wineheight){
-                timelineheight = scroll - (heightp1 + heighttitre) + wineheight/2 + "px";
-                document.getElementById("timeline").style.height = timelineheight;
+                timelineheight = scroll - (heightp1 + heighttitre) + wineheight/2;
+                document.getElementById("timeline").style.height = timelineheight +"px";
                 if(scroll - (heightp1 + heighttitre) + wineheight/2 <= 0){
                     document.getElementById("timeline").style.height = 0;
                 }
-            }})
+            }
+            if (timelineheight > 200){
+                document.getElementById("timelineone").classList.add("timelinedisplayed")
+            }else{
+                document.getElementById("timelineone").classList.remove("timelinedisplayed")
+        }
+  })

@@ -69,6 +69,7 @@ body{
 }
 
 .page{
+    position: relative;
     width: 100%;
 }
 
@@ -116,12 +117,33 @@ h2{
     border-radius: 5px;
 }
 
-h3{
+.timelinetitle{
+    animation: fonduout 0.5s ease forwards;
     position: absolute;
-    margin-left: auto; 
-    margin-right: auto; 
+    font-family: Noto-bold;
+    font-size: 2em;
 }
 
+.timelinetitle.one{
+    left: 50%;
+    top: 200px;
+}
+
+.timelinedisplayed{
+    animation: fonduin 0.5s ease forwards;
+}
+
+
+
+@keyframes fonduin {
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}    
+}
+
+@keyframes fonduout {
+    0%{opacity: 100%;}
+    100%{opacity: 0%;}    
+}
 
 @keyframes introin {
     0%{opacity: 0%;
