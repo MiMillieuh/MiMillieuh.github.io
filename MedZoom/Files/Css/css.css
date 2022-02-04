@@ -40,9 +40,8 @@ body{
 }
 
 .title{
-    width: 38%;
+    width: 40%;
     left: 10%;
-    height: 30vh;
     bottom: 690px;
     margin: 0;
     padding: 0;
@@ -117,6 +116,11 @@ h2{
     border-radius: 5px;
 }
 
+h3{
+    position: absolute;
+    margin-left: auto; 
+    margin-right: auto; 
+}
 
 
 @keyframes introin {
@@ -185,6 +189,10 @@ h2{
 
     #titre{
         top: 0;
+    }
+
+    .title{
+        width: 80%;
     }
 
     #vidaccueil{

@@ -1,3 +1,8 @@
+//Bienvenu dans mon js. ici aucune librairie externe n'a été utilisée...
+//Il faut donc parfois mettre un peu les mains dans le cambouis
+
+
+//Video in out avec le scroll
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
     scrollsave = scroll;
@@ -10,7 +15,7 @@ window.addEventListener("scroll", (event) => {
         setTimeout(1000, vidin())
         
     });
-
+//fix du bug resize pour la video
     window.addEventListener('resize', function(event){
         setTimeout(500, fixhv())
         console.log("tonpapalenoir")
@@ -49,7 +54,7 @@ window.addEventListener("scroll", (event) => {
     });
     */
 
-
+//Ligne qui décends avec le scroll avec une formule qui permets de rester centré peu importe l'écran
     window.addEventListener("scroll", (event) => {
         wineheight = window.innerHeight;
         winewidht = window.innerWidth;
