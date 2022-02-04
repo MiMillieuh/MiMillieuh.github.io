@@ -61,11 +61,14 @@ window.addEventListener("scroll", (event) => {
         if(winewidht < 1000){
             timelineheight = scroll - (heightp1 + heighttitre) + wineheight/2 + 300 + "px";
             document.getElementById("timeline").style.height = timelineheight;
+            if(scroll - (heightp1 + heighttitre) + wineheight/2 + 300 <= 0){
+                document.getElementById("timeline").style.height = 0;
+            }
         }else
             if (scroll >= heighttitre + heightp1 -wineheight){
                 timelineheight = scroll - (heightp1 + heighttitre) + wineheight/2 + "px";
                 document.getElementById("timeline").style.height = timelineheight;
-                }else{
+                if(scroll - (heightp1 + heighttitre) + wineheight/2 <= 0){
                     document.getElementById("timeline").style.height = 0;
                 }
-        })
+            }})
