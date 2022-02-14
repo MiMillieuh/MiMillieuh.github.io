@@ -29,6 +29,22 @@ window.addEventListener("scroll", (event) => {
                 setTimeout(1000, vidin())
     }})
 
+    function disableScroll() {
+        // Get the current page scroll position
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    
+            // if any scroll is attempted, set this to the previous value
+            window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop);
+            };
+    }
+    
+    function enableScroll() {
+        window.onscroll = function() {};
+    }
+    
+
 /*
     window.addEventListener("scroll", (event) => {
         wineheight = window.innerHeight;
@@ -77,9 +93,46 @@ window.addEventListener("scroll", (event) => {
                     document.getElementById("timeline").style.height = 0;
                 }
             }
-            if (timelineheight > 200){
+
+
+            //Apparition de titre 1ère année
+            if (timelineheight > 250){
                 document.getElementById("timelineone").classList.add("timelinedisplayed")
+                
             }else{
                 document.getElementById("timelineone").classList.remove("timelinedisplayed")
+            }
+
+
+            //Article 1ère année
+                if (timelineheight > 275 && timelineheight < 275 + document.getElementById("col3").offsetHeight){
+                    document.getElementById("timeline").classList.add("fonduout")
+                    document.getElementById("timeline").classList.remove("fonduin")
+                }else{
+                    document.getElementById("timeline").classList.remove("fonduout")
+                    document.getElementById("timeline").classList.add("fonduin")
+
         }
-  })
+
+        if (timelineheight > 350){
+            document.getElementById("timelineone").classList.add("titletimelinearticle")
+            document.getElementById("timelineone").classList.remove("titletimelinearticlebaseleft")
+            document.getElementById("col3").classList.add("fonduinrev")
+
+        }else{
+            document.getElementById("timelineone").classList.add("titletimelinearticle")
+            document.getElementById("timelineone").classList.add
+            ("titletimelinearticlebaseleft")
+            document.getElementById("col3").classList.remove("fonduinrev")
+
+            
+
+            if (timelineheight > 275 + document.getElementById("col3").offsetHeight){
+                document.getElementById("timeline").classList.remove("fonduout")
+                document.getElementById("timeline").classList.add("fonduin")
+            }else{
+                document.getElementById("timeline").classList.add("fonduout")
+                document.getElementById("timeline").classList.remove("fonduin")
+
+}
+  }})
